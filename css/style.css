@@ -33,7 +33,7 @@
     border-radius: 7px;
 }
 
-.done{
+.completed{
     color: crimson;
     text-decoration: line-through;
 }

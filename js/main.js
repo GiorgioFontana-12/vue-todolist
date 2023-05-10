@@ -21,7 +21,7 @@ createApp({
             this.taskList.splice(i, 1)
         },
         doneTask(i){
-            this.taskList[i].classList.add("donedon");
+            this.taskList[i].done = true
         }
 
     },
