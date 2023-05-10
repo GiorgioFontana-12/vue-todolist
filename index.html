@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>ToBoolist</title>
 </head>
 <body>
-    
+    <div id="app" class="box">
+        <input @keyUp.enter="addNewTask" type="text" v-model="newTask.task" class="margin1 input">
+        <button @click="addNewTask" class="margin1 addButton" ><i class="fa-solid fa-plus"></i></button>
+        
+        <ul class="backgroundColor">
+            <li v-for="(task, i) in taskList" class="margin1 backgroundColor">
+                {{ task }}
+                <button></button>
 
+            </li>
+        </ul> 
+    </div>    
 
-
-
-    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
