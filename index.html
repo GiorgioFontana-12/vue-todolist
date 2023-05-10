@@ -15,7 +15,7 @@
         <button @click="addNewTask" class="margin1 Button" ><i class="fa-solid fa-plus"></i></button>
         
         <ul class="backgroundColor">
-            <li v-for="(task, i) in taskList" class="margin1 backgroundColor flexSpaceBetween" :class="(done(i) == true) ? 'completed' : '' ">
+            <li v-for="(task, i) in taskList" class="margin1 backgroundColor flexSpaceBetween" :class="(task.done == true) ? 'completed' : '' ">
                 
                 <span class="backgroundColor" >{{ task.task }}</span>
 
