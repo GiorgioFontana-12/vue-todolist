@@ -8,10 +8,11 @@
 
 .box{
     width: 800px;
-    height: 100vh;
-    margin: 0 auto;
+    height: calc(100vh - 40px ) ;
+    margin: 20px auto;
     background-color: #121212;
     padding: 25px;
+    border-radius: 7px;
 }
 
 .margin1{
@@ -21,7 +22,7 @@
     background-color: #121212;
 }
 
-.addButton{
+.Button{
     height: 24px;
     width: 24px;
     text-align: center;
@@ -30,4 +31,17 @@
 .input{
     min-height: 24px;
     border-radius: 7px;
+}
+
+.done{
+    color: crimson;
+    text-decoration: line-through;
+}
+
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
 }

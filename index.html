@@ -12,12 +12,17 @@
 <body>
     <div id="app" class="box">
         <input @keyUp.enter="addNewTask" type="text" v-model="newTask.task" class="margin1 input">
-        <button @click="addNewTask" class="margin1 addButton" ><i class="fa-solid fa-plus"></i></button>
+        <button @click="addNewTask" class="margin1 Button" ><i class="fa-solid fa-plus"></i></button>
         
         <ul class="backgroundColor">
-            <li v-for="(task, i) in taskList" class="margin1 backgroundColor">
-                {{ task }}
-                <button></button>
+            <li v-for="(task, i) in taskList" class="margin1 backgroundColor flexSpaceBetween">
+                
+                <span class="backgroundColor" >{{ task.task }}</span>
+
+                <div class="backgroundColor">
+                    <button @click="doneTask(i)" class="margin1 Button"> <i class="fa-solid fa-check"></i> </button>
+                    <button @click="trashTask(i)" class="margin1 Button"> <i class="fa-solid fa-trash"></i> </button>
+                </div>
 
             </li>
         </ul> 
