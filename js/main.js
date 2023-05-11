@@ -21,7 +21,11 @@ createApp({
             this.taskList.splice(i, 1)
         },
         doneTask(i){
-            this.taskList[i].done = true
+            if (this.taskList[i].done == false){
+                this.taskList[i].done = true
+            }else if (this.taskList[i].done == true) {
+                this.taskList[i].done = false
+            }
         }
 
     },
